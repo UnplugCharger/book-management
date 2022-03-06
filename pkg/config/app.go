@@ -1,6 +1,7 @@
 package config
 
 import (
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"gorm.io/gorm"
 )
 
@@ -12,8 +13,9 @@ var (
 
 
 func Connect(){
-	d, err := gorm.Open("mysql","data2020:Data2020!/bookstorecharset=utf8mb4&parseTime=True&loc=Local")
-
+	//Username and password for mysql
+	d, err := gorm.Open("mysql","data2020:Data2020!@tcp(localhost:3306)/bookstore?charset=utf8mb4&parseTime=True&loc=Local")
+    
 	if err != nil {
 		panic(err)
 	}

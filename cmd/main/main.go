@@ -1,10 +1,19 @@
 package main
 
 import (
-	"fmt"
+	"UnplugCharger/book-management/pkg/routes"
+	"log"
+	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
-func main() {
 
-	fmt.Println("Starting my backend Journey")
+
+
+func main()  {
+	r := mux.NewRouter()
+	routes.RegisterBookRoutes(r)
+	http.Handle("/",r)
+	log.Fatal(http.ListenAndServe("localhost:9010",r))
 }
