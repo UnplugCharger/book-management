@@ -9,12 +9,9 @@ import (
 	"github.com/gorilla/mux"
 )
 
-
-
-
-func main()  {
+func main() {
 	r := mux.NewRouter()
 	routes.RegisterBookRoutes(r)
-	http.Handle("/",r)
-	log.Fatal(http.ListenAndServe("localhost:9010",r))
+	http.Handle("/", r)
+	log.Fatal(http.ListenAndServe("localhost:9010", r))
 }

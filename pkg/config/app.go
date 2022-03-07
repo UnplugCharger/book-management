@@ -5,22 +5,19 @@ import (
 	"gorm.io/gorm"
 )
 
-
-
 var (
 	db *gorm.DB
 )
 
-
-func Connect(){
+func Connect() {
 	//Username and password for mysql
 	dsn := "data2020:Data2020!@tcp(localhost:3306)/bookstore?charset=utf8mb4&parseTime=True&loc=Local"
 	d, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
-    
+
 	if err != nil {
 		panic(err)
 	}
-	db=d
+	db = d
 }
 
 func GetDB() *gorm.DB {
