@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"UnplugCharger/book-management/pkg/controllers"
+	"github.com/UnplugCharger/book-management/pkg/controllers"
 
 	"github.com/gorilla/mux"
 )
