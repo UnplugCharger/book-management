@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/UnplugCharger/book-management/pkg/models"
+	models "github.com/UnplugCharger/book-management/pkg/models"
 	"github.com/UnplugCharger/book-management/pkg/utils"
 	"github.com/gorilla/mux"
 )
